@@ -1,0 +1,163 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  background-color: #c8d3d5;
+  scroll-behavior: smooth;
+}
+
+header {
+  padding: 15px;
+  background-color: #fcfafa;
+}
+
+#header-name {
+  font-family: "Island Moments", "Inter";
+  color: #6e8387;
+  font-size: 3rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+  margin: 3%;
+  align-items: center;
+}
+
+#introductory {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+  background-color: #fcfafa;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+main h2 {
+  font-family: "Island Moments", "Inter";
+  font-size: 2.5rem;
+}
+
+.image-container {
+  display: flex;
+  max-height: 500px;
+  gap: 15px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.image-container img {
+  width: 50%;
+  object-fit: cover;
+}
+
+.sub-image-container {
+  display: flex;
+  width: 50%;
+  flex-wrap: wrap;
+}
+
+.image-container,
+.sub-image-container img {
+  object-fit: cover;
+  flex-shrink: 1;
+  height: auto;
+  min-width: 0;
+}
+
+#nav-wrapper {
+  margin: 4%;
+}
+
+.navigate-arrow {
+  font-size: 2rem;
+  color: #6e8387;
+  background-color: #fcfafa;
+  border-radius: 20%;
+}
+
+.navigate-arrow:hover {
+  transform: scale(1.1);
+  transition: transform ease 0.3s;
+}
+
+#additional-info {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  flex: 1;
+  background-color: #fcfafa;
+  border-radius: 10px;
+}
+
+.additional-header {
+  background-color: #a4b8c4;
+  padding: 10px;
+  padding-bottom: 0px;
+  border-radius: 10px 10px 0 0;
+}
+
+.additional-nav {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+}
+
+.additional-nav a {
+  text-decoration: none;
+  color: inherit;
+  padding: 6px;
+  border-radius: 5px;
+}
+
+/* children are in order of selected web pages eg 1 = About */
+.additional-nav a:first-child {
+  background-color: #fcfafa;
+  transform: translateY(4px);
+}
+
+.additional-container {
+  display: flex;
+  align-items: start;
+  gap: 70px;
+  padding: 30px;
+}
+
+.additional-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sidebar-item {
+  display: flex;
+  gap: 10px;
+}
+
+.additional-sidebar img {
+  width: 250px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.obituary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.obituary p {
+  background-color: #a4b8c4;
+  padding: 25px;
+  border-radius: 8px;
+  flex: 1;
+}
