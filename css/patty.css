@@ -11,16 +11,18 @@ body {
   height: 100%;
   background-color: #c8d3d5;
   scroll-behavior: smooth;
+  background-image: url("/images/pexels-pixabay-68507.jpg");
+  object-fit: cover;
 }
 
 header {
-  padding: 15px;
+  padding: 5px 10px;
   background-color: #fcfafa;
 }
 
 #header-name {
   font-family: "Island Moments", "Inter";
-  color: #6e8387;
+  color: #6a7de1;
   font-size: 3rem;
 }
 
@@ -30,6 +32,7 @@ main {
   flex-shrink: 1;
   margin: 3%;
   align-items: center;
+  gap: 30px;
 }
 
 #introductory {
@@ -39,11 +42,15 @@ main {
   background-color: #fcfafa;
   padding: 10px;
   border-radius: 10px;
+  background: rgba(252, 250, 250, 0.4);
+  backdrop-filter: blur(3px);
 }
 
 main h2 {
   font-family: "Island Moments", "Inter";
   font-size: 2.5rem;
+  color: #6a7de1;
+  text-shadow: rgba(0, 0, 0, 0.4) 2px 1px;
 }
 
 .image-container {
@@ -52,6 +59,16 @@ main h2 {
   gap: 15px;
   overflow: hidden;
   border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+  .image-container {
+    display: flex;
+    max-height: 500px;
+    gap: 5px;
+    overflow: hidden;
+    border-radius: 10px;
+  }
 }
 
 .image-container img {
@@ -73,15 +90,10 @@ main h2 {
   min-width: 0;
 }
 
-#nav-wrapper {
-  margin: 4%;
-}
-
-.navigate-arrow {
-  font-size: 2rem;
-  color: #6e8387;
-  background-color: #fcfafa;
-  border-radius: 20%;
+@media (max-width: 600px) {
+  #nav-wrapper {
+    display: none;
+  }
 }
 
 .navigate-arrow:hover {
@@ -94,12 +106,11 @@ main h2 {
   width: 100%;
   flex-direction: column;
   flex: 1;
-  background-color: #fcfafa;
+  background: rgba(252, 250, 250, 0.4);
   border-radius: 10px;
 }
 
 .additional-header {
-  background-color: #a4b8c4;
   padding: 10px;
   padding-bottom: 0px;
   border-radius: 10px 10px 0 0;
@@ -115,12 +126,13 @@ main h2 {
   text-decoration: none;
   color: inherit;
   padding: 6px;
+  color: whi;
   border-radius: 5px;
 }
 
 /* children are in order of selected web pages eg 1 = About */
 .additional-nav a:first-child {
-  background-color: #fcfafa;
+  background-color: #f0f3c8;
   transform: translateY(4px);
 }
 
