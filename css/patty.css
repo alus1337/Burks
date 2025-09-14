@@ -127,14 +127,14 @@ main h2 {
   text-decoration: none;
   color: inherit;
   padding: 6px;
-  color: whi;
   border-radius: 5px;
 }
 
 /* children are in order of selected web pages eg 1 = About */
 .additional-nav a:first-child {
-  background-color: #f0f3c8;
+  background-color: #6a7de1;
   transform: translateY(4px);
+  color: white;
 }
 
 .additional-container {
