@@ -26,6 +26,12 @@ header {
   font-size: 3rem;
 }
 
+@media (max-width: 600px) {
+  #header-name {
+    text-align: center;
+  }
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -123,15 +129,14 @@ main h2 {
   gap: 15px;
 }
 
-.additional-nav a {
-  text-decoration: none;
-  color: inherit;
+.additional-nav p {
   padding: 6px;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 /* children are in order of selected web pages eg 1 = About */
-.additional-nav a:first-child {
+.selected-item {
   background-color: #6a7de1;
   transform: translateY(4px);
   color: white;
