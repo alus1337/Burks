@@ -1,0 +1,27 @@
+{
+  "name": "burks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./scripts/patty.js",
+  "scripts": {
+    "build": "webpack --mode=development",
+    "start": "webpack serve --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alus1337/Burks.git"
+  },
+  "author": "James Burks",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alus1337/Burks/issues"
+  },
+  "homepage": "https://github.com/alus1337/Burks#readme",
+  "dependencies": {
+    "firebase": "^12.3.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.2"
+  }
+}

@@ -115,6 +115,7 @@ main h2 {
   background: rgba(252, 250, 250, 0.4);
   backdrop-filter: blur(3px);
   border-radius: 10px;
+  position: relative;
 }
 
 .additional-header {
@@ -142,7 +143,14 @@ main h2 {
   color: white;
 }
 
-.additional-container {
+.about-container {
+  display: flex;
+  align-items: start;
+  gap: 70px;
+  padding: 30px;
+}
+
+.memory-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
@@ -226,4 +234,24 @@ main h2 {
   border-radius: 8px;
   width: 100%;
   padding: 5px;
+}
+
+.addButton {
+  border: none;
+  background-color: #6a7de1;
+  color: #fcfafa;
+  border-radius: 8px;
+  padding: 6px;
+  cursor: pointer;
+}
+
+.addOverlay {
+  position: fixed;
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.4);
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
 }
