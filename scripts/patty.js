@@ -111,17 +111,34 @@ Memories.addEventListener("click", async () => {
     console.log("appended!");
   });
 
-  const addRef = document.createElement("button");
-  addRef.textContent = "Add Memory";
-  addRef.classList.add("addButton");
-  const addNavRef = document.querySelector("#additional-nav");
-  addNavRef.appendChild(addRef);
+  if (!document.querySelector(".addButton")) {
+    const addRef = document.createElement("button");
+    addRef.textContent = "Add Memory";
+    addRef.classList.add("addButton");
+    const addNavRef = document.querySelector("#additional-nav");
+    addNavRef.appendChild(addRef);
 
-  addRef.addEventListener("click", async () => {
-    const addOverlay = document.createElement("div");
-    addOverlay.classList.add("addOverlay");
-    document.body.appendChild(addOverlay);
-  });
+    addRef.addEventListener("click", async () => {
+      const addOverlay = document.createElement("div");
+      addOverlay.classList.add("addOverlay");
+      document.body.appendChild(addOverlay);
+
+      const addMemContainer = document.createElement("div");
+      addMemContainer.id = "addMem";
+
+      // username section
+      const nameContainer = document.createElement("div");
+      nameContainer.classList.add("memSubContainer");
+
+      const name = document.createElement("p");
+      name.textContent = "Name";
+
+      const nameInput = document.createElement("input");
+      nameInput.type;
+
+      //
+    });
+  }
 });
 
 const nav_options = document.querySelector("#additional-nav");

@@ -253,5 +253,20 @@ main h2 {
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: 9999;
+  z-index: 9998;
+}
+
+#addMem {
+  position: fixed;
+  border-radius: 8px;
+  padding: 5px;
+  background-color: #fcfafa;
+  display: flex;
+  flex-direction: column;
+}
+
+.memSubContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
