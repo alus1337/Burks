@@ -5,6 +5,8 @@ import {
   limit,
   query,
   collection,
+  setDoc,
+  doc,
 } from "firebase/firestore";
 
 const firebaseConfig = {
@@ -86,11 +88,10 @@ about.addEventListener("click", () => {
   loadAbout();
 });
 
-const Memories = document.querySelector("#Memories");
-Memories.addEventListener("click", async () => {
+async function loadMemories() {
   container.innerHTML = "";
   container.className = "memory-container";
-
+  
   const comments = query(collection(db, "comments"), limit(4));
   const commentSnap = await getDocs(comments);
 
@@ -110,6 +111,11 @@ Memories.addEventListener("click", async () => {
     container.appendChild(div);
     console.log("appended!");
   });
+}
+
+const Memories = document.querySelector("#Memories");
+Memories.addEventListener("click", async () => {
+  loadMemories();
 
   if (!document.querySelector(".addButton")) {
     const addRef = document.createElement("button");
@@ -134,9 +140,58 @@ Memories.addEventListener("click", async () => {
       name.textContent = "Name";
 
       const nameInput = document.createElement("input");
-      nameInput.type;
+      nameInput.type = "text";
+
+      nameContainer.appendChild(name);
+      nameContainer.appendChild(nameInput)
+
+      // memory content section
+      const textContainer = document.createElement("div");
+      textContainer.classList.add("memSubContainer");
+
+      const text = document.createElement("p");
+      text.textContent = "Content";
+
+      const textInput = document.createElement("input");
+      textInput.type = "text";
+
+      textContainer.appendChild(text);
+      textContainer.appendChild(textInput)
+
+      // submit button
+      const submit = document.createElement("button");
+      submit.id = "submit"
+      submit.textContent = "Submit";
+
+      submit.addEventListener("click", async () => {
+        const subName = nameInput.value;
+        const subText = textInput.value;
+
+        try {
+          await setDoc(doc(db, 'comments', subName), {
+          Name: subName,
+          Content: subText
+        });
+
+        alert("Your memory was uploaded!");
+        loadMemories();
+        } catch (error) {
+          alert("An error has occured: " + error.message)
+        }
+
+        addMemContainer.remove();
+        addOverlay.remove();
+
+
+      })
 
       //
+      addMemContainer.appendChild(nameContainer);
+      addMemContainer.appendChild(textContainer);
+      addMemContainer.appendChild(submit);
+
+      document.body.appendChild(addMemContainer);
+
     });
   }
 });
